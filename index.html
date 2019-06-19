@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/index.js"></script>
+		<!--写样式-->
+		<style>
+			html, body,div{
+				width: 100%;
+				height: 100%;
+			}
+			div {
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+			}
+
+			#page1 {
+				background-image: url(img/halloween1.jpg);
+				
+			}
+
+			#page2 {
+				background-image: url(img/halloween2.jpg);
+				display: none;
+			}
+
+			#page3 {
+				background-image: url(img/halloweenMain.jpg);
+				display: none;
+			}
+
+			#page4 {
+				background-image: url(img/charm1.jpg);
+                display: none;
+			}
+
+			#title {
+				position: fixed;
+				left: 300px;
+				top: 114px;
+				animation: titlemove 2s;
+			}
+			
+			@keyframes titlemove{
+				from{
+					opacity: 0;
+				}
+				to{
+					opacity: 1;
+				}
+			}
+
+			#box {
+				position: fixed;
+				left: 300px;
+				bottom: 400px;
+				/**动画**/
+				animation: baohemove 1s infinite;
+			}
+            /***关键帧***/
+			@keyframes baohemove{
+				0%{
+					left: 300px;
+				}
+				50%{
+					left: 330px;
+				}
+				100%{
+					left: 300px;
+				}
+			}
+			#pumpkin {
+				position: fixed;
+				left: 300px;
+				top: 80px;
+			}
+
+			#startgame {
+				position: fixed;
+				left: 376px;
+				bottom: 300px;
+			}
+
+			#charm01 {
+				position: fixed;
+				left: 50px;
+				top: 100px;
+				animation: movecharm01 5s infinite;
+			}
+
+			#charm02 {
+				position: fixed;
+				left: 250px;
+				top: 400px;
+				animation: movecharm02 10s infinite;
+			}
+
+			#charm03 {
+				position: fixed;
+				left: 50px;
+				top: 650px;
+				animation: movecharm03 15s infinite;
+			}
+
+			#charm04 {
+				position: fixed;
+				left: 500px;
+				top: 50px;
+				animation: movecharm04 10s infinite;
+			}
+
+			#charm05 {
+				position: fixed;
+				left: 400px;
+				top: 900px;
+				animation: movecharm05 5s infinite;
+			}
+
+			#charm06 {
+				position: fixed;
+				left: 300px;
+				top: 800px;
+				animation: movecharm06 10s infinite;
+			}
+@keyframes movecharm01
+      {
+           0%
+           { left:50px;
+           	 top:100px;
+           }
+           30%
+           {
+           	 left:50px;
+           	 top:200px;
+           }
+           60%
+           {
+           	 left:100px;
+           	 top:150px;
+           }
+           100%
+           {
+           	 left:50px;
+           	 top:100px;
+           }
+      }
+ @keyframes movecharm02
+      {
+           0%
+           { left:250px;
+           	 top:400px;
+           }
+           30%
+           {
+           	 left:300px;
+           	 top:450px;
+           }
+           60%
+           {
+           	 left:350px;
+           	 top:450px;
+           }
+           100%
+           {
+           	 left:250px;
+           	 top:400px;
+           }
+      }
+
+       @keyframes movecharm03
+	  {
+		0%   {left:50px;top:650px;}
+		50%  {left:500px;top:750px;}
+		100% {left:50px;top:650px;}
+	  }
+
+	  @keyframes movecharm04
+		{
+			0%   {left:500px;top:50px;}
+			10%  {left:650px;top:100px;}
+			50% {left:650px;top:650px;}
+			90% {left:650px;top:100px;}
+			100% {left:500px;top:50px;}
+		}
+		@keyframes movecharm05
+		{	
+			0%   {left:400px;top:900px;}
+			50%  {left:400px;top:950px;}
+			100% {left:400px;top:900px;}
+		}
+		@keyframes movecharm06
+		{
+			0%   {left:300px;top:800px;}
+		    50%  {left:300px;top:1200px;}
+			100% {left:300px;top:800px;}
+		}
+
+			#charm07 {
+				position: fixed;
+				right: 50px;
+				bottom: 300px;
+				animation: charm07move 2s infinite;
+			}
+			
+			@keyframes charm07move{
+				from{
+					width:20%;
+					height: 20%;
+				}
+				to{
+					width:5%;
+					height: 5%;
+				}
+			}
+			
+			
+		</style>
+
+	</head>
+	<body>
+		
+		<div id="page1">
+			<!---在div中显示 标题和 宝盒-->
+			<img id="title" src="img/title.png" />
+			<img id="box" src="img/box.png" onclick="gotoPage(2)"/>
+		</div>
+		<div id="page2">
+			<img id="pumpkin" src="img/pumpkin.png" />
+			<img id="startgame" src="img/startGame.jpg" onclick="gotoPage(3)"/>
+		</div>
+		<div id="page3">
+			<img id="charm01" src="img/1.png" onclick="suijitu()"/>
+			<img id="charm02" src="img/2.png"  onclick="suijitu()"/>
+			<img id="charm03" src="img/3.png"  onclick="suijitu()"/>
+			<img id="charm04" src="img/4.png"  onclick="suijitu()"/>
+			<img id="charm05" src="img/5.png"  onclick="suijitu()"/>
+			<img id="charm06" src="img/6.png"  onclick="suijitu()"/>
+			<img id="charm07" src="img/7.png"  onclick="suijitu()"/>
+		</div>
+		<div id="page4">
+            
+		</div>
+	   
+	</body>
+</html>
